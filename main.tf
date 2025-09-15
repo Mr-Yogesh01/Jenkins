@@ -1,10 +1,10 @@
 provider "aws" {
-  region = "ap-south-1"
+  region = "us-east-1"
 }
 
 resource "aws_instance" "dev" {
-    ami = "ami-0b982602dbb32c5bd"
-    instance_type = "t2.micro"
+    ami = "ami-0f88e80871fd81e91"
+    instance_type = "t2.mediam"
     tags = {
       Name = "king"
     }

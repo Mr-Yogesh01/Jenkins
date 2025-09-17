@@ -1,0 +1,19 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('git') {
+            steps {
+                git branch: 'main', url: 'https://github.com/Mr-Yogesh01/TERRAFORM.git'
+            }
+        }
+
+        stage('init') {
+            steps {
+                dir('DAY-13-TG-ELB') {   // removed extra space
+                    sh 'terraform init'
+                }
+            }
+        }
+    }
+}

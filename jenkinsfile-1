@@ -1,10 +1,14 @@
 pipeline {
-    agent any 
-    stage('Git Clone') {
+    agent any
+
+    stages {
+
+        stage('Git Clone') {
             steps {
                 git branch: 'main', url: 'https://github.com/Mr-Yogesh01/fpjt.git'
             }
         }
+
         stage('Build') {
             steps {
                 echo "Running Maven Clean & Package..."
@@ -18,5 +22,6 @@ pipeline {
                 sh 'mvn test'
             }
         }
+
     }
 }

@@ -5,7 +5,7 @@ pipeline {
 
         stage('Git Clone') {
             steps {
-                git branch: 'main', url: 'https://github.com/Mr-Yogesh01/Kubernetes-ArgoCD.git'
+                git branch: 'main', url: 'https://github.com/Mr-Yogesh01/spring-boot-google-cloud-platform-examples.git'
             }
         }
 
